@@ -1,0 +1,10 @@
+.memotest-card {
+  padding: 15px;
+  border: 2px solid grey;
+  margin-bottom: 40px;
+}
+
+.memotest-card img {
+  height: 250px;
+  width: 250px;
+}

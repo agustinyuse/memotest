@@ -1,0 +1,4 @@
+<div class="memotest-card" (click)="selectCard()">
+  <img [hidden]="!card.getIsSelected()" [src]="card.getImagePath()">
+  <img [hidden]="card.getIsSelected()" src="assets/images/cards/star-wars/blank.png">
+</div>
