@@ -12,7 +12,7 @@ export class BoardService {
   isHittingServer: boolean;
 
   constructor(private http:HttpClient) {
-
+    
    }
 
    getBoard() : Observable<Board> {
@@ -33,7 +33,7 @@ export class BoardService {
       return of(board);
     }
 
-    return this.http.get<Board>("http://localhost:8080/myapp/api/model/");
+    return this.http.get<Board>("http://localhost:4200/myapp/api/model/");
    }
 
    shuffle(array) {

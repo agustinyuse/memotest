@@ -1,14 +1,27 @@
-<div style="height: 100px;">
-  <div *ngIf="matchResult != null && matchResult.isMatched">
-    <h2>Good job!</h2>
+<div class="container-fluid text-right">
+  <app-navbar class="mt-1"></app-navbar>
+</div>
+
+<div class="container-fluid text-center">
+  <h1>
+    Memotest: for Simon, the best!
+  </h1>
+</div>
+<div class="container-fluid" style="margin-top: 50px;">
+  <div style="height: 100px;">
+    <div *ngIf="matchResult != null && matchResult.isMatched">
+      <h2>Good job!</h2>
+    </div>
+    <div *ngIf="matchResult != null && !matchResult.isMatched">
+      <h2>Better luck next time!</h2>
+    </div>
   </div>
-  <div *ngIf="matchResult != null && !matchResult.isMatched">
-    <h2>Better luck next time!</h2>
+  
+  <div class="row d-flex justify-content-center">
+    <div *ngFor="let card of board.cards" class="m-1">
+        <app-card [card]=card (cardSelected)="onCardSelected(card)"></app-card>
+    </div>
   </div>
 </div>
 
-<div class="row d-flex justify-content-center">
-  <div *ngFor="let card of board.cards" class="m-1">
-      <app-card [card]=card (cardSelected)="onCardSelected(card)"></app-card>
-  </div>
-</div>
+

@@ -15,10 +15,10 @@ export class BoardComponent implements OnInit {
 
   constructor(private boardService : BoardService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.boardService.getBoard().subscribe(p => {
       this.board = p;
-    });
+    });    
   }
 
   onCardSelected(selectedCard: Card) {
